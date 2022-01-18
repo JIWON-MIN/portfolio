@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {forwardRef} from 'react';
 import{
   WorksWrapper,
   WorksTitle,
@@ -15,14 +15,12 @@ import{
 import Dokit from './img/dokit.jpg';
 import Cosmos from './img/cosmos.JPG';
 
-const Works = () => {
-
-  const [hover, setHover] = useState(0);
+const Works = forwardRef((props, ref) => {
 
   return (
     <>
       <WorksWrapper>
-        <WorksTitle>
+        <WorksTitle ref={ref}>
           Works
           <WorksSub>What I have created (Only team projects here)</WorksSub>
         </WorksTitle>
@@ -56,6 +54,6 @@ const Works = () => {
       </WorksWrapper>
     </>
   );
-};
+});
 
 export default Works;

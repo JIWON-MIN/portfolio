@@ -16,13 +16,14 @@ import GitIcon from './img/GitIcon.png';
 import VueIcon from './img/VueIcon.png';
 import AngularIcon from './img/AngularIcon.png';
 import Tobecontinue from './img/Tobecontinue.png';
+import React, {forwardRef} from 'react';
 
 
-const Skills = () => {
+const Skills = forwardRef((props, ref) => {
   return (
     <>
       <SkillsWrapper>
-        <SkillsTitle>Skills</SkillsTitle>
+        <SkillsTitle ref={ref}>Skills</SkillsTitle>
         <SkillsContent>
           <SkillsIcon src={CIcon} />
           <SkillsIcon src={CppIcon} />
@@ -43,6 +44,6 @@ const Skills = () => {
       </SkillsWrapper>
     </>
   )
-};
+});
 
 export default Skills;

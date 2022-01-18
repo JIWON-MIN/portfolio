@@ -9,8 +9,9 @@ import {
   AboutText,
 } from './StyledComponent';
 import profile from './img/profile.jpg'
+import React, {forwardRef} from 'react';
 
-const About = () => {
+const About = forwardRef((props, ref) => {
 
   const content = "전공을 통해 데이터 베이스, 소프트웨어 공학, 운영체제, 알고리즘, 인공지능 등을 배웠습니다." + 
                   " 그러던 중 주변 분들을 통해 웹 개발에 관심이 생겨 프론트엔드 개발자로 팀 프로젝트를 진행하게 되었고, 제 자신에게 가능성을 보았습니다.\n\n" +
@@ -31,7 +32,7 @@ const About = () => {
   return (
    <>
     <AboutWrapper>
-      <AboutTitle>About me</AboutTitle>
+      <AboutTitle ref={ref}>About me</AboutTitle>
       <AboutContentWrapper>
         <AboutPhoto src={profile}/>
         <AboutContent>
@@ -43,6 +44,6 @@ const About = () => {
     </AboutWrapper>
    </>
  );
-};
+});
 
 export default About;
