@@ -121,19 +121,20 @@ export const AboutContent = styled.div`
 export const AboutName = styled.div`
   margin-top: 30px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: black;
 `;
 
 export const AboutSub = styled.div`
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(119, 119, 119, 1);
 `;
 
 export const AboutText = styled.div`
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 28px;
   color: black;
 `;
 
@@ -193,8 +194,57 @@ export const WorksContent = styled.div`
   // margin-top: 20px;
 `;
 
-export const WorksElement = styled.img`
+export const WorksElement = styled.div`
+  position: relative;
   margin-top: 60px;
+`;
+
+export const WorksImg = styled.img`
   width: 60%;
   cursor: pointer;
+
+  ${WorksElement}:hover &{
+    transition: 1s;
+    filter: brightness(20%);
+  }
 `;
+
+export const WorksDetail = styled.div`
+  z-index: 1;
+  color: white;
+  display: inline;
+  visibility: hidden;
+  position: absolute;
+  width: 60%;
+  margin: 0 auto;
+  cursor: pointer;
+  text-align: left;
+
+  ${WorksElement}:hover &{
+    transition: 1s;
+    visibility: visible;
+  }
+
+`;
+
+export const WorksName = styled.div`
+  font-size: 2.4vw;
+  font-weight: 700;
+  padding: 3% 0 0 3%;
+`;
+
+export const WorksDesc = styled.div`
+  font-size: 1vw;
+  line-height: 2vw;
+  padding: 0 3% 0;
+`;
+
+export const WorksMyRole = styled.ul`
+  font-size: 1.5vw;
+  font-weight: 600;
+  line-height: 3vw;
+  padding: 1% 3% 0 6%;
+`;
+
+export const WorksRoleElement = styled.li`
+`
