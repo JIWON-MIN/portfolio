@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { HiOutlineViewList } from 'react-icons/hi';
+import { RiArrowDropDownLine } from 'react-icons/ri'
 
 //////////////////// NavBar ////////////////////
 
@@ -248,3 +249,44 @@ export const WorksMyRole = styled.ul`
 
 export const WorksRoleElement = styled.li`
 `
+
+//////////////////// FAQ ////////////////////
+
+export const FAQWrapper = styled.div`
+  text-align: center;
+  margin-top: 120px;
+`;
+
+export const FAQTitle = styled.div`
+  font-weight: 700;
+  font-size: 36px;
+`;
+
+export const FAQSub = styled.div`
+  font-size: 18px;
+  color: rgba(176, 176, 176, 1);
+  font-weight: normal;
+`;
+
+export const FAQContent = styled.div`
+  margin: 20px 15vw 0;
+`;
+
+export const FAQElement = styled.div`
+  text-align: left;
+  &:first-child{
+    border-top: 5px solid rgba(107, 187, 244, 1);
+  }
+  padding: .7% 3% .7%;
+  font-size: 14px;
+  color: rgba(119, 119, 119, 1);
+  border-bottom: 1px solid rgba(176, 176, 176, 1);
+`;
+
+export const FAQButton = styled.img`
+  width: 14px;
+  height: 14px;
+  // display: inline;
+  // font-size: 50px;
+  // color: rgba(107, 187, 244, 1)
+`;

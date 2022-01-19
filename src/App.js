@@ -2,6 +2,7 @@ import Intro from './components/Intro';
 import About from './components/About';
 import Skills from './components/Skills';
 import Works from './components/Works';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import React, {useRef} from 'react';
@@ -58,6 +59,7 @@ function App() {
     <About ref={aboutRef}/>
     <Skills ref={SkillsRef}/>
     <Works ref={WorksRef}/>
+    <FAQ />
     <Contact />
     <Footer />
    </>
