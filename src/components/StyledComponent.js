@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { HiOutlineViewList } from 'react-icons/hi';
-import { RiArrowDropDownLine } from 'react-icons/ri'
+import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
 //////////////////// NavBar ////////////////////
 
@@ -272,21 +272,78 @@ export const FAQContent = styled.div`
   margin: 20px 15vw 0;
 `;
 
+export const FAQQuestion = styled.div`
+  padding: .7% 3% .7%;
+  color: rgba(119, 119, 119, 1);
+  border-bottom: 1px solid rgba(176, 176, 176, 1);
+`;
+
+export const FAQAnswer = styled.div`
+  color: #333333;
+  background: #EAEAEA;
+  padding: 3%;
+  line-height: 30px;
+  // display: none;
+`;
+
 export const FAQElement = styled.div`
   text-align: left;
   &:first-child{
     border-top: 5px solid rgba(107, 187, 244, 1);
   }
-  padding: .7% 3% .7%;
   font-size: 14px;
-  color: rgba(119, 119, 119, 1);
-  border-bottom: 1px solid rgba(176, 176, 176, 1);
+
+  &:first-child{
+    ${FAQQuestion}{
+      color: ${props => props.open===1 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
+      font-weight: ${props => props.open===1 ? "bold":"normal"};
+    }
+    ${FAQAnswer}{
+      display: ${props => props.open===1 ? "block":"none"};
+    }
+  }
+  &:nth-child(2){
+    ${FAQQuestion}{
+      color: ${props => props.open===2 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
+      font-weight: ${props => props.open===2 ? "bold":"normal"};
+    }
+    ${FAQAnswer}{
+      display: ${props => props.open===2 ? "block":"none"};
+    }
+  }
+  &:nth-child(3){
+    ${FAQQuestion}{
+      color: ${props => props.open===3 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
+      font-weight: ${props => props.open===3 ? "bold":"normal"};
+    }
+    ${FAQAnswer}{
+      display: ${props => props.open===3 ? "block":"none"};
+    }
+  }
+  &:nth-child(4){
+    ${FAQQuestion}{
+      color: ${props => props.open===4 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
+      font-weight: ${props => props.open===4 ? "bold":"normal"};
+    }
+    ${FAQAnswer}{
+      display: ${props => props.open===4 ? "block":"none"};
+    }
+  }
+  &:nth-child(5){
+    ${FAQQuestion}{
+      color: ${props => props.open===5 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
+      font-weight: ${props => props.open===5 ? "bold":"normal"};
+    }
+    ${FAQAnswer}{
+      display: ${props => props.open===5 ? "block":"none"};
+    }
+  }
+
 `;
 
 export const FAQButton = styled.img`
   width: 14px;
-  height: 14px;
-  // display: inline;
-  // font-size: 50px;
-  // color: rgba(107, 187, 244, 1)
+  float: right;
+  padding-top: .7%;
+  cursor: pointer;
 `;
