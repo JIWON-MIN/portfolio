@@ -9,16 +9,13 @@ import {
   FAQAnswer,
 } from './StyledComponent';
 import DownButton from './img/DownButton.png';
-import {useState} from 'react';
+import {forwardRef, useState} from 'react';
 
-const FAQ = () => {
+const FAQ = forwardRef((props, ref) => {
 
   const [open,setOpen] = useState(0);
-  console.log(open);
 
   const ClickOpen = (n) => {
-
-    console.log('Click!');
 
     if(n===1){
       (open===1) ? setOpen(0) : setOpen(1);
@@ -37,7 +34,7 @@ const FAQ = () => {
   return(
     <>
       <FAQWrapper>
-        <FAQTitle>
+        <FAQTitle ref={ref}>
           FAQ
           <FAQSub>Frequently Asked Questions</FAQSub>
         </FAQTitle>
@@ -62,11 +59,10 @@ const FAQ = () => {
             <FAQQuestion>업무와 관련하여 지금까지의 경험 중 가장 가치 있었던 경험을 이야기해주세요.<FAQButton src={DownButton} onClick={()=>ClickOpen(5)}/></FAQQuestion>
             <FAQAnswer>안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다</FAQAnswer>
           </FAQElement>
-          <br/><br/>
         </FAQContent>
       </FAQWrapper>
     </>
   )
-};
+});
 
 export default FAQ;

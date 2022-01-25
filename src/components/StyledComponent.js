@@ -1,6 +1,26 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { HiOutlineViewList } from 'react-icons/hi';
-import { setSelectionRange } from '@testing-library/user-event/dist/utils';
+import { GrMail } from 'react-icons/gr';
+import { AiFillGithub } from 'react-icons/ai';
+import { IoLogoRss } from 'react-icons/io';
+
+//////////////////// REUSEABLE ////////////////////
+
+const wrapper = styled.div`
+  margin-top: 120px;
+  text-align: center;
+`;
+
+const title = styled.div`
+  font-weight: 700;
+  font-size: 36px;
+`;
+
+const sub = styled.div`
+  font-size: 18px;
+  color: rgba(176, 176, 176, 1);
+  font-weight: normal;
+`;
 
 //////////////////// NavBar ////////////////////
 
@@ -21,6 +41,7 @@ export const NavBarLogo = styled.span`
   margin-top: 15px;
   margin-left: 4vw;
   font-size: 18px;
+  cursor: pointer;
 `;
 
 export const NavBarMenuWrapper = styled.div`
@@ -54,13 +75,12 @@ export const NavBarButton = styled(HiOutlineViewList)`
 
 //////////////////// Intro ////////////////////
 
-export const IntroWrapper = styled.div`
+export const IntroWrapper = styled(wrapper)`
+  margin-top: 60px;
   left: 0;
   right: 0;
-  margin-top: 60px;
   height: 200px;
   background: rgba(107, 187, 244, 1);
-  text-align: center;
 `;
 
 export const IntroContent = styled.div`
@@ -78,24 +98,18 @@ export const IntroContent = styled.div`
 
 //////////////////// About ////////////////////
 
-export const AboutWrapper = styled.div`
-  margin-top: 120px;
-  margin-left: 360px;
-  margin-right: 360px; 
+export const AboutWrapper = styled(wrapper)`
+  margin: 120px 360px 0;
+
   @media screen and (max-width: 1360px) {
-    margin-left: 240px;
-    margin-right: 240px; 
+    margin: 80px 240px 0; 
   }
   @media screen and (max-width: 1000px) {
-    margin-left: 60px;
-    margin-right: 60px; 
+    margin: 60px 60px 0;
   }
-  text-align: center;
 `;
 
-export const AboutTitle = styled.div`
-  font-weight: 700;
-  font-size: 36px;
+export const AboutTitle = styled(title)`
 `;
 
 export const AboutContentWrapper = styled.div`
@@ -141,31 +155,27 @@ export const AboutText = styled.div`
 
 //////////////////// Skills ////////////////////
 
-export const SkillsWrapper = styled.div`
+export const SkillsWrapper = styled(wrapper)`
   margin-left: 120px;
   margin-right: 120px;
-  margin-top: 120px;
-  text-align: center;
 `;
 
-export const SkillsTitle = styled.div`
-  font-weight: 700;
-  font-size: 36px;
+export const SkillsTitle = styled(title)`
 `;
 
 export const SkillsContent = styled.div`
-  line-height: 160px;
+  line-height: 120px;
   margin-top: 48px;
 `;
 
 export const SkillsIcon = styled.img`
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   padding-left: 4rem;
   padding-right: 4rem;
   @media screen and (max-width: 1220px) {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
   }
   @media screen and (max-width: 1000px) {
     padding-left: 2rem;
@@ -175,29 +185,21 @@ export const SkillsIcon = styled.img`
 
 //////////////////// Works ////////////////////
 
-export const WorksWrapper = styled.div`
-  text-align: center;
-  margin-top: 120px;
+export const WorksWrapper = styled(wrapper)`
 `;
 
-export const WorksTitle = styled.div`
-  font-weight: 700;
-  font-size: 36px;
+export const WorksTitle = styled(title)`
 `;
 
-export const WorksSub = styled.div`
-  font-size: 18px;
-  color: rgba(176, 176, 176, 1);
-  font-weight: normal;
+export const WorksSub = styled(sub)`
 `;
 
 export const WorksContent = styled.div`
-  // margin-top: 20px;
 `;
 
 export const WorksElement = styled.div`
   position: relative;
-  margin-top: 60px;
+  margin-top: 48px;
 `;
 
 export const WorksImg = styled.img`
@@ -252,24 +254,17 @@ export const WorksRoleElement = styled.li`
 
 //////////////////// FAQ ////////////////////
 
-export const FAQWrapper = styled.div`
-  text-align: center;
-  margin-top: 120px;
+export const FAQWrapper = styled(wrapper)`
 `;
 
-export const FAQTitle = styled.div`
-  font-weight: 700;
-  font-size: 36px;
+export const FAQTitle = styled((title))`
 `;
 
-export const FAQSub = styled.div`
-  font-size: 18px;
-  color: rgba(176, 176, 176, 1);
-  font-weight: normal;
+export const FAQSub = styled(sub)`
 `;
 
 export const FAQContent = styled.div`
-  margin: 20px 15vw 0;
+  margin: 40px 15vw 0;
 `;
 
 export const FAQQuestion = styled.div`
@@ -283,7 +278,6 @@ export const FAQAnswer = styled.div`
   background: #EAEAEA;
   padding: 3%;
   line-height: 30px;
-  // display: none;
 `;
 
 export const FAQElement = styled.div`
@@ -347,3 +341,94 @@ export const FAQButton = styled.img`
   padding-top: .7%;
   cursor: pointer;
 `;
+
+//////////////////// Contact ////////////////////
+
+export const ContactWrapper = styled((wrapper))`
+`;
+
+export const ContactTitle = styled((title))`
+`;
+
+export const ContactSub = styled(sub)`
+`;
+
+export const ContactContent = styled.div`
+  margin-top: 40px;
+  background: rgba(107, 187, 244, 0.2);
+  overflow: hidden;
+`;
+
+export const ContactClickInducing = styled.div`
+  font-size: 10px;
+  color: rgba(119, 119, 119, 1);
+  transform: rotate(-15deg) translate(-170px,20px);
+
+  animation: sizeup 1.5s infinite alternate;
+
+  @keyframes sizeup{
+    to{
+      transform: rotate(-15deg) translate(-170px, 20px) scale(1.5, 1.5);
+    }
+  }
+`;
+
+export const ContactElement = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 20px 60px 0;
+
+  &:nth-child(2){
+    padding-top: 60px;
+  }
+  &:last-child{
+    padding-bottom: 80px;
+  }
+`;
+
+export const ContactIcon = styled.div`
+`;
+
+export const ContactMailIcon = styled(GrMail)`
+  width: 18px;
+  height: 18px;
+  padding-top: .2rem;
+  cursor: pointer;
+`;
+
+export const ContactGithubIcon = styled(AiFillGithub)`
+  width: 18px;
+  height: 18px;
+  padding-top: .2rem;
+  cursor: pointer;
+`;
+
+export const ContactBlogIcon = styled(IoLogoRss)`
+  width: 18px;
+  height: 18px;
+  padding-top: .2rem;
+  cursor: pointer;
+`;
+
+export const ContactAddress = styled.div`
+  padding-left: .5rem;
+`;
+
+//////////////////// Footer ////////////////////
+
+export const FooterWrapper = styled(wrapper)`
+`;
+
+export const FooterPageUpButton = styled.img`
+  width: 24px;
+  cursor: pointer;
+  transform: rotate(180deg);
+`;
+
+export const FooterCopyright = styled.div`
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 18px;
+`;
+
+

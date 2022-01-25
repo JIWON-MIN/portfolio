@@ -21,8 +21,8 @@ function App() {
   const aboutRef = useRef(null);
   const SkillsRef = useRef(null);
   const WorksRef = useRef(null);
-  // const FAQRef = userRef(null);
-  // const ContactRef = userRef(null);
+  const FAQRef = useRef(null);
+  const ContactRef = useRef(null);
 
   const NavBar = () => {
 
@@ -37,13 +37,13 @@ function App() {
     return(
       <>
       <NavBarWrapper>
-        <NavBarLogo>JIWON MIN</NavBarLogo>
+        <NavBarLogo onClick={(e) => menuClick(e, 0)}>JIWON MIN</NavBarLogo>
         <NavBarMenuWrapper>
           <NavBarMenuElement onClick={(e) => menuClick(e, aboutRef.current.offsetTop)}>About</NavBarMenuElement>
           <NavBarMenuElement onClick={(e) => menuClick(e, SkillsRef.current.offsetTop)}>Skills</NavBarMenuElement>
           <NavBarMenuElement onClick={(e) => menuClick(e, WorksRef.current.offsetTop)}>Works</NavBarMenuElement>
-          <NavBarMenuElement onClick={(e) => menuClick(e, 4)}>FAQ</NavBarMenuElement>
-          <NavBarMenuElement onClick={(e) => menuClick(e, 5)}>Contact</NavBarMenuElement>
+          <NavBarMenuElement onClick={(e) => menuClick(e, FAQRef.current.offsetTop)}>FAQ</NavBarMenuElement>
+          <NavBarMenuElement onClick={(e) => menuClick(e, ContactRef.current.offsetTop)}>Contact</NavBarMenuElement>
         </NavBarMenuWrapper>
         <NavBarButton />
       </NavBarWrapper>
@@ -59,8 +59,8 @@ function App() {
     <About ref={aboutRef}/>
     <Skills ref={SkillsRef}/>
     <Works ref={WorksRef}/>
-    <FAQ />
-    <Contact />
+    <FAQ ref={FAQRef}/>
+    <Contact ref={ContactRef}/>
     <Footer />
    </>
   );
