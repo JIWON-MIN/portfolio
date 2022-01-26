@@ -76,24 +76,30 @@ export const NavBarButton = styled(HiOutlineViewList)`
 //////////////////// Intro ////////////////////
 
 export const IntroWrapper = styled(wrapper)`
-  margin-top: 60px;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background: rgba(107, 187, 244, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0 0;
+  height: 400px;
+  // background: rgba(107, 187, 244, 1);
+  background: linear-gradient(135deg, #4568dc,#DCB8FF);
 `;
 
 export const IntroContent = styled.div`
-  &:first-child{
-    padding-top: 45px;
-  }
+  text-align: left;
   color: white; 
-  line-height: 4rem;
-  font-size: 36px;
+  line-height: 6rem;
+  font-size: 3rem;
   font-weight: 700;
   @media screen and (max-width: 750px) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
+`;
+
+export const IntroImage = styled.img`
+  margin-left: 5rem;
+  width: 25rem;
+  height: 25rem;
 `;
 
 //////////////////// About ////////////////////
