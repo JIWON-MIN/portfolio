@@ -4,6 +4,8 @@ import { GrMail } from 'react-icons/gr';
 import { AiFillGithub } from 'react-icons/ai';
 import { IoLogoRss } from 'react-icons/io';
 
+// 모바일 ~ 768 타블렛 ~1024 데스크탑
+
 //////////////////// REUSEABLE ////////////////////
 
 const wrapper = styled.div`
@@ -46,11 +48,11 @@ export const NavBarLogo = styled.span`
 
 export const NavBarMenuWrapper = styled.div`
   margin-top: 15px;
-  margin-right: 48px;
+  margin-right: 4vw;
   font-size: 12px;
   padding-top: 5px;
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;
@@ -67,7 +69,7 @@ export const NavBarButton = styled(HiOutlineViewList)`
   height: 36px;
   width: 36px;
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 767px) {
     display: block;  
   }
 
@@ -81,7 +83,6 @@ export const IntroWrapper = styled(wrapper)`
   align-items: center;
   margin: 60px 0 0;
   height: 400px;
-  // background: rgba(107, 187, 244, 1);
   background: linear-gradient(135deg, #4568dc,#DCB8FF);
 `;
 
@@ -91,15 +92,34 @@ export const IntroContent = styled.div`
   line-height: 6rem;
   font-size: 3rem;
   font-weight: 700;
-  @media screen and (max-width: 750px) {
-    font-size: 1.5rem;
+  margin-left: 1rem;
+
+  @media screen and (max-width: 1023px) {
+    font-size: 2rem;
+    line-height: 5rem;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 1.7rem;
+    line-height: 5rem;
+  }
+
 `;
 
 export const IntroImage = styled.img`
   margin-left: 5rem;
   width: 25rem;
   height: 25rem;
+
+  @media screen and (max-width: 1023px) {
+    margin-left: 2rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  @media screen and (max-width: 767px) {
+    margin-left: 1rem;
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 //////////////////// About ////////////////////
@@ -179,13 +199,17 @@ export const SkillsIcon = styled.img`
   height: 120px;
   padding-left: 4rem;
   padding-right: 4rem;
-  @media screen and (max-width: 1220px) {
+  @media screen and (max-width: 1023px) {
     width: 80px;
     height: 80px;
-  }
-  @media screen and (max-width: 1000px) {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  @media screen and (max-width: 767px) {
+    width: 80px;
+    height: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 
@@ -303,6 +327,12 @@ export const FAQElement = styled.div`
     border-top: 5px solid rgba(107, 187, 244, 1);
   }
   font-size: 14px;
+  @media screen and (max-width: 1023px){
+    font-size: 12px;
+  } 
+  @media screen and (max-width: 767px){
+    font-size: 8px;
+  } 
 
   &:first-child{
     ${FAQQuestion}{
