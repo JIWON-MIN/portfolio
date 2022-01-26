@@ -11,6 +11,7 @@ import{
   WorksDesc,
   WorksMyRole,
   WorksRoleElement,
+  WorksGithubIcon,
 } from './StyledComponent';
 import Dokit from './img/dokit.jpg';
 import Cosmos from './img/cosmos.JPG';
@@ -18,13 +19,13 @@ import portfolio from './img/portfolio.JPG';
 
 const Works = forwardRef((props, ref) => {
 
-  // const GotoPage = (link) => {
+  const GotoPage = (link) => {
 
-  //   // https://m.blog.naver.com/deersoul6662/221805875601
+    // https://m.blog.naver.com/deersoul6662/221805875601
 
-  //   window.location.href = link;
-  //   window.open(link);
-  // }
+    window.location.href = link;
+    window.open(link);
+  }
 
   return (
     <>
@@ -43,6 +44,7 @@ const Works = forwardRef((props, ref) => {
                 <WorksRoleElement>SRS, 최종 보고서, 논문 작성 참여</WorksRoleElement>
                 <WorksRoleElement>React와 styled-component를 활용하여 친구 및 팀 검색, 추가, 삭제, 즐겨찾기 관련 Front-end 기능 전담</WorksRoleElement>
               </WorksMyRole>
+              <WorksGithubIcon onClick={()=>GotoPage("https://github.com/JIWON-MIN/dokit")} />
             </WorksDetail>
             <WorksImg src={Dokit} />
           </WorksElement>
@@ -55,6 +57,7 @@ const Works = forwardRef((props, ref) => {
                 <WorksRoleElement>Figma를 이용한 전체 UI 설계 전담</WorksRoleElement>
                 <WorksRoleElement>프론트엔드의 대부분인 STT(Speech-To-Text), 요약, 번역, 오디오 파일 관련 서버 통신 및 출력 기능 전담</WorksRoleElement>
               </WorksMyRole>
+              <WorksGithubIcon onClick={()=>GotoPage("https://github.com/JIWON-MIN/HMFingers")} />
             </WorksDetail>
             <WorksImg src={Cosmos} />
             {/* portfolio 추가하기 */}
@@ -68,6 +71,7 @@ const Works = forwardRef((props, ref) => {
                 <WorksRoleElement>React와 styled-component를 활용하여 약 1-2주(2022년 1월 후반)간 개발</WorksRoleElement>
                 <WorksRoleElement>꾸준히 유지보수 중!</WorksRoleElement>
               </WorksMyRole>
+              <WorksGithubIcon onClick={()=>GotoPage("https://github.com/JIWON-MIN/portfolio")} />
             </WorksDetail>
             <WorksImg src={portfolio} />
           </WorksElement>

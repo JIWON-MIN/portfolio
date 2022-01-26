@@ -225,7 +225,7 @@ export const WorksDetail = styled.div`
   visibility: hidden;
   position: absolute;
   width: 60%;
-  margin: 0 auto;
+  height: 100%;
   cursor: pointer;
   text-align: left;
 
@@ -252,7 +252,18 @@ export const WorksMyRole = styled.ul`
   font-size: 1.5vw;
   font-weight: 600;
   line-height: 3vw;
-  padding: 1% 3% 0 6%;
+  padding: 3% 3% 0 6%;
+  margin: 0;
+`;
+
+export const WorksGithubIcon = styled(AiFillGithub)`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0 1rem 1.5rem 0;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
 `;
 
 export const WorksRoleElement = styled.li`
