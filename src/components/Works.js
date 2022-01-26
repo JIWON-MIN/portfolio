@@ -14,8 +14,17 @@ import{
 } from './StyledComponent';
 import Dokit from './img/dokit.jpg';
 import Cosmos from './img/cosmos.JPG';
+import portfolio from './img/portfolio.JPG';
 
 const Works = forwardRef((props, ref) => {
+
+  // const GotoPage = (link) => {
+
+  //   // https://m.blog.naver.com/deersoul6662/221805875601
+
+  //   window.location.href = link;
+  //   window.open(link);
+  // }
 
   return (
     <>
@@ -49,6 +58,18 @@ const Works = forwardRef((props, ref) => {
             </WorksDetail>
             <WorksImg src={Cosmos} />
             {/* portfolio 추가하기 */}
+          </WorksElement>
+          <WorksElement>
+            <WorksDetail>
+              <WorksName>Portfollio</WorksName>
+              <WorksDesc>: 소개와 사용 가능한 언어와 기술, 개발 이력 등을 담은 개인 연습 및 홍보 용 포트폴리오 웹사이트 (개인 프로젝트)</WorksDesc>
+              <WorksMyRole>
+                <WorksRoleElement>Figma를 사용한 전체 UI 구상</WorksRoleElement>
+                <WorksRoleElement>React와 styled-component를 활용하여 약 1-2주(2022년 1월 후반)간 개발</WorksRoleElement>
+                <WorksRoleElement>꾸준히 유지보수 중!</WorksRoleElement>
+              </WorksMyRole>
+            </WorksDetail>
+            <WorksImg src={portfolio} />
           </WorksElement>
         </WorksContent>
       </WorksWrapper>
