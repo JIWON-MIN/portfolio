@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import {
   IntroWrapper,
   IntroContent,
-  IntroImage
+  IntroImage,
+  IntroDownButton,
 } from './StyledComponent';
-import mimoticon from './img/mimoticon.png'
-
+import mimoticon from './img/mimoticon.png';
+import DownButtonWhite from './img/DownButtonWhite.png';
 
 const Intro = () => {
 
@@ -54,8 +55,11 @@ const Intro = () => {
   return (
     <>
       <IntroWrapper>
-        <IntroContent>{Text}<br/>{Text2}<br/>{Text3}</IntroContent>
+        <IntroContent>
+          {Text}<br/>{Text2}<br/>{Text3}
+        </IntroContent>
         <IntroImage src={mimoticon} />
+        <IntroDownButton src={DownButtonWhite} />
       </IntroWrapper>
     </>
   );

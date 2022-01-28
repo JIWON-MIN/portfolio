@@ -84,6 +84,11 @@ export const IntroWrapper = styled(wrapper)`
   margin: 60px 0 0;
   height: 400px;
   background: linear-gradient(135deg, #4568dc,#DCB8FF);
+
+  @media screen and (max-width: 767px) {
+    height: 100vh;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const IntroContent = styled.div`
@@ -92,21 +97,25 @@ export const IntroContent = styled.div`
   line-height: 6rem;
   font-size: 3rem;
   font-weight: 700;
-  margin-left: 1rem;
+  padding-left: 10%;
+  width: 50%;
+  height: 70%;
 
   @media screen and (max-width: 1023px) {
     font-size: 2rem;
     line-height: 5rem;
   }
   @media screen and (max-width: 767px) {
-    font-size: 1.7rem;
-    line-height: 5rem;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    width: 90%;
+    margin-top: 2rem;
+    padding-left: 2rem;
   }
 
 `;
 
 export const IntroImage = styled.img`
-  margin-left: 5rem;
   width: 25rem;
   height: 25rem;
 
@@ -116,10 +125,14 @@ export const IntroImage = styled.img`
     height: 20rem;
   }
   @media screen and (max-width: 767px) {
-    margin-left: 1rem;
-    width: 18rem;
-    height: 18rem;
+    margin: 5rem auto 0;
   }
+`;
+
+export const IntroDownButton = styled.img`
+  width: 100px;
+  height: 100px;
+  // margin: 0 auto;
 `;
 
 //////////////////// About ////////////////////
