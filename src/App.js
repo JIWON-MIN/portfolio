@@ -15,6 +15,9 @@ import {
   NavBarButton,
 } from './components/StyledComponent';
 
+import smoothscroll from 'smoothscroll-polyfill';
+smoothscroll.polyfill();
+
 
 function App() {
 

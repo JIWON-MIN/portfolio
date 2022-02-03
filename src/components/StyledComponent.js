@@ -16,12 +16,21 @@ const wrapper = styled.div`
 const title = styled.div`
   font-weight: 700;
   font-size: 36px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+  
 `;
 
 const sub = styled.div`
   font-size: 18px;
   color: rgba(176, 176, 176, 1);
   font-weight: normal;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 //////////////////// NavBar ////////////////////
@@ -129,12 +138,6 @@ export const IntroImage = styled.img`
   }
 `;
 
-export const IntroDownButton = styled.img`
-  width: 100px;
-  height: 100px;
-  // margin: 0 auto;
-`;
-
 //////////////////// About ////////////////////
 
 export const AboutWrapper = styled(wrapper)`
@@ -170,6 +173,10 @@ export const AboutPhoto = styled.img`
 export const AboutContent = styled.div`
   text-align: left;
   margin-left: 60px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0;
+  }
 `;
 
 export const AboutName = styled.div`
@@ -195,8 +202,9 @@ export const AboutText = styled.div`
 //////////////////// Skills ////////////////////
 
 export const SkillsWrapper = styled(wrapper)`
-  margin-left: 120px;
-  margin-right: 120px;
+  // margin-left: 120px;
+  // margin-right: 120px;
+  margin-left: auto;
 `;
 
 export const SkillsTitle = styled(title)`
@@ -253,6 +261,11 @@ export const WorksImg = styled.img`
     transition: 1s;
     filter: brightness(20%);
   }
+
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+  
 `;
 
 export const WorksDetail = styled.div`
@@ -271,18 +284,30 @@ export const WorksDetail = styled.div`
     visibility: visible;
   }
 
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+
 `;
 
 export const WorksName = styled.div`
   font-size: 2.4vw;
   font-weight: 700;
   padding: 3% 0 0 3%;
+
+  @media screen and (max-width: 767px) {
+    padding: 3% 0 1% 3%;
+  }
 `;
 
 export const WorksDesc = styled.div`
   font-size: 1vw;
   line-height: 2vw;
   padding: 0 3% 0;
+
+  @media screen and (max-width: 767px) {
+    line-height: 2.5vw;
+  }
 `;
 
 export const WorksMyRole = styled.ul`
@@ -301,6 +326,12 @@ export const WorksGithubIcon = styled(AiFillGithub)`
   width: 48px;
   height: 48px;
   cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    width: 24px;
+    height: 24px;
+    margin: 0 .5rem .7rem 0;
+  }
 `;
 
 export const WorksRoleElement = styled.li`
@@ -319,12 +350,19 @@ export const FAQSub = styled(sub)`
 
 export const FAQContent = styled.div`
   margin: 40px 15vw 0;
+  @media screen and (max-width: 767px) {
+    margin: 30px 5vw 0;
+  }
 `;
 
 export const FAQQuestion = styled.div`
   padding: .7% 3% .7%;
   color: rgba(119, 119, 119, 1);
   border-bottom: 1px solid rgba(176, 176, 176, 1);
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 
 export const FAQAnswer = styled.div`
@@ -400,6 +438,10 @@ export const FAQButton = styled.img`
   float: right;
   padding-top: .7%;
   cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 2%;
+  }
 `;
 
 //////////////////// Contact ////////////////////
@@ -417,20 +459,24 @@ export const ContactContent = styled.div`
   margin-top: 40px;
   background: rgba(107, 187, 244, 0.2);
   overflow: hidden;
+
+  @media screen and (max-width: 767px){
+    font-size: 14px;
+  } 
 `;
 
 export const ContactClickInducing = styled.div`
   font-size: 10px;
   color: rgba(119, 119, 119, 1);
-  transform: rotate(-15deg) translate(-170px,20px);
+  transform: rotate(-15deg) translate(-100px,20px);
 
   animation: sizeup 1.5s infinite alternate;
 
   @keyframes sizeup{
     to{
-      transform: rotate(-15deg) translate(-170px, 20px) scale(1.5, 1.5);
+      transform: rotate(-15deg) translate(-100px, 20px) scale(1.5, 1.5);
     }
-  }
+  } 
 `;
 
 export const ContactElement = styled.div`
@@ -489,6 +535,10 @@ export const FooterCopyright = styled.div`
   margin-top: 60px;
   margin-bottom: 20px;
   font-size: 18px;
+
+  @media screen and (max-width: 767px){
+    font-size: 12px;
+  }
 `;
 
 

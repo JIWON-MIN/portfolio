@@ -52,11 +52,11 @@ const FAQ = forwardRef((props, ref) => {
             <FAQAnswer>안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다</FAQAnswer>
           </FAQElement>
           <FAQElement open={open}>
-            <FAQQuestion>기술 경향을 파악하고 업무 역량을 강화하기 위한 본인의 학습 방법을 설명해주세요.<FAQButton src={DownButton} onClick={()=>ClickOpen(4)}/></FAQQuestion>
+            <FAQQuestion>업무 역량을 강화하기 위한 본인의 학습 방법을 설명해주세요.<FAQButton src={DownButton} onClick={()=>ClickOpen(4)}/></FAQQuestion>
             <FAQAnswer>안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다</FAQAnswer>
           </FAQElement>
           <FAQElement open={open}>
-            <FAQQuestion>업무와 관련하여 지금까지의 경험 중 가장 가치 있었던 경험을 이야기해주세요.<FAQButton src={DownButton} onClick={()=>ClickOpen(5)}/></FAQQuestion>
+            <FAQQuestion>업무와 관련하여 가장 가치 있었던 경험을 이야기해주세요.<FAQButton src={DownButton} onClick={()=>ClickOpen(5)}/></FAQQuestion>
             <FAQAnswer>안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다 안녕하세요 민지원입니다</FAQAnswer>
           </FAQElement>
         </FAQContent>

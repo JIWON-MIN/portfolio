@@ -5,6 +5,9 @@ import {
 } from './StyledComponent';
 import UpButton from './img/DownButton.png';
 
+import smoothscroll from 'smoothscroll-polyfill';
+smoothscroll.polyfill();
+
 const Footer = () => {
   
   const pageUp = () => {
