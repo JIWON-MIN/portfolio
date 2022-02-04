@@ -5,7 +5,7 @@ import Works from './components/Works';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 
 import {
   NavBarWrapper,
@@ -13,6 +13,8 @@ import {
   NavBarMenuWrapper,
   NavBarMenuElement,
   NavBarButton,
+  NavBarDropDownWrapper,
+  NavBarDropDownElement,
 } from './components/StyledComponent';
 
 import smoothscroll from 'smoothscroll-polyfill';
@@ -28,6 +30,9 @@ function App() {
   const ContactRef = useRef(null);
 
   const NavBar = () => {
+    
+    const [isOpen, setIsOpen] = useState(0);
+    // console.log(isOpen);
 
     const menuClick = (e, loc) => {
       window.scrollTo({
@@ -35,6 +40,15 @@ function App() {
         behavior: 'smooth',
       }
       )
+      setIsOpen(0);
+    }
+    
+    const menubarOpen = () => {
+      if(isOpen){
+        setIsOpen(0);
+      }else{
+        setIsOpen(1);
+      }
     }
   
     return(
@@ -48,9 +62,15 @@ function App() {
           <NavBarMenuElement onClick={(e) => menuClick(e, FAQRef.current.offsetTop)}>FAQ</NavBarMenuElement>
           <NavBarMenuElement onClick={(e) => menuClick(e, ContactRef.current.offsetTop)}>Contact</NavBarMenuElement>
         </NavBarMenuWrapper>
-        <NavBarButton />
+        <NavBarButton onClick={menubarOpen} />
       </NavBarWrapper>
-  
+      <NavBarDropDownWrapper isOpen={isOpen}>
+        <NavBarDropDownElement onClick={(e) => menuClick(e, aboutRef.current.offsetTop)}>About</NavBarDropDownElement>
+        <NavBarDropDownElement onClick={(e) => menuClick(e, SkillsRef.current.offsetTop)}>Skills</NavBarDropDownElement>
+        <NavBarDropDownElement onClick={(e) => menuClick(e, WorksRef.current.offsetTop)}>Works</NavBarDropDownElement>
+        <NavBarDropDownElement onClick={(e) => menuClick(e, FAQRef.current.offsetTop)}>FAQ</NavBarDropDownElement>
+        <NavBarDropDownElement onClick={(e) => menuClick(e, ContactRef.current.offsetTop)}>Contact</NavBarDropDownElement>
+      </NavBarDropDownWrapper>
       </>
     );
   }

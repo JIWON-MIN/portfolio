@@ -77,6 +77,7 @@ export const NavBarButton = styled(HiOutlineViewList)`
   display: none;
   height: 36px;
   width: 36px;
+  cursor: pointer;
 
   @media screen and (max-width: 767px) {
     display: block;  
@@ -84,6 +85,23 @@ export const NavBarButton = styled(HiOutlineViewList)`
 
 `
 
+export const NavBarDropDownWrapper = styled.div`
+  left: 0;
+  right: 0;
+  background-color: rgba(248, 248, 248, 1);
+  height: 200px;
+  position: fixed;
+  overflow: hidden;
+  ${(props)=>props.isOpen == 0 ? `transition:.3s; height: 0;`:`transition:.3s; height: 200px;`}
+`;
+
+export const NavBarDropDownElement = styled.div`
+  margin-top: 15px;
+  padding-left: 10vw;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(119, 119, 119, .3);
+`;
 //////////////////// Intro ////////////////////
 
 export const IntroWrapper = styled(wrapper)`
@@ -368,8 +386,8 @@ export const FAQQuestion = styled.div`
 export const FAQAnswer = styled.div`
   color: #333333;
   background: #EAEAEA;
-  padding: 3%;
   line-height: 30px;
+  overflow: hidden;
 `;
 
 export const FAQElement = styled.div`
@@ -391,7 +409,7 @@ export const FAQElement = styled.div`
       font-weight: ${props => props.open===1 ? "bold":"normal"};
     }
     ${FAQAnswer}{
-      display: ${props => props.open===1 ? "block":"none"};
+      ${(props)=>props.open == 1 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
     }
   }
   &:nth-child(2){
@@ -400,7 +418,7 @@ export const FAQElement = styled.div`
       font-weight: ${props => props.open===2 ? "bold":"normal"};
     }
     ${FAQAnswer}{
-      display: ${props => props.open===2 ? "block":"none"};
+      ${(props)=>props.open == 2 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
     }
   }
   &:nth-child(3){
@@ -409,7 +427,7 @@ export const FAQElement = styled.div`
       font-weight: ${props => props.open===3 ? "bold":"normal"};
     }
     ${FAQAnswer}{
-      display: ${props => props.open===3 ? "block":"none"};
+      ${(props)=>props.open == 3 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
     }
   }
   &:nth-child(4){
@@ -418,7 +436,7 @@ export const FAQElement = styled.div`
       font-weight: ${props => props.open===4 ? "bold":"normal"};
     }
     ${FAQAnswer}{
-      display: ${props => props.open===4 ? "block":"none"};
+      ${(props)=>props.open == 4 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
     }
   }
   &:nth-child(5){
@@ -427,7 +445,7 @@ export const FAQElement = styled.div`
       font-weight: ${props => props.open===5 ? "bold":"normal"};
     }
     ${FAQAnswer}{
-      display: ${props => props.open===5 ? "block":"none"};
+      ${(props)=>props.open == 5 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
     }
   }
 
