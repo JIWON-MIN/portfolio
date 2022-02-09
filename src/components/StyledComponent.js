@@ -100,7 +100,8 @@ export const NavBarDropDownElement = styled.div`
   padding-left: 10vw;
   font-size: 14px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(119, 119, 119, .3);
+  color: rgba(60,60,60,1);
+  border-bottom: 1px solid rgba(119, 119, 119, .15);
 `;
 //////////////////// Intro ////////////////////
 
@@ -388,6 +389,9 @@ export const FAQAnswer = styled.div`
   background: #EAEAEA;
   line-height: 30px;
   overflow: hidden;
+  @media screen and (max-width: 767px) {
+    line-height: 20px;
+  }
 `;
 
 export const FAQElement = styled.div`
@@ -405,47 +409,42 @@ export const FAQElement = styled.div`
 
   &:first-child{
     ${FAQQuestion}{
-      color: ${props => props.open===1 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
-      font-weight: ${props => props.open===1 ? "bold":"normal"};
+      ${props => props.open === 1 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open == 1 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
+      ${(props)=>props.open === 1 ? `transition:.5s; max-height:200px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(2){
     ${FAQQuestion}{
-      color: ${props => props.open===2 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
-      font-weight: ${props => props.open===2 ? "bold":"normal"};
+      ${props => props.open === 2 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open == 2 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
+      ${(props)=>props.open === 2 ? `transition:.5s; max-height:200px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(3){
     ${FAQQuestion}{
-      color: ${props => props.open===3 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
-      font-weight: ${props => props.open===3 ? "bold":"normal"};
+      ${props => props.open === 3 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open == 3 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
+      ${(props)=>props.open === 3 ? `transition:.5s; max-height:200px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(4){
     ${FAQQuestion}{
-      color: ${props => props.open===4 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
-      font-weight: ${props => props.open===4 ? "bold":"normal"};
+      ${props => props.open === 4 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open == 4 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
+      ${(props)=>props.open === 4 ? `transition:.5s; max-height:300px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(5){
     ${FAQQuestion}{
-      color: ${props => props.open===5 ? "rgba(107, 187, 244, 1)":"rgba(119, 119, 119, 1)"};
-      font-weight: ${props => props.open===5 ? "bold":"normal"};
+      ${props => props.open === 5 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open == 5 ? `transition:1s; height:200px; padding:2%;`:`transition:1s; height:0;`}
+      ${(props)=>props.open === 5 ? `transition:.5s; max-height:300px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
 
