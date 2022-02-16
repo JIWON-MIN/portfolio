@@ -412,7 +412,7 @@ export const FAQElement = styled.div`
       ${props => props.open === 1 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open === 1 ? `transition:.5s; max-height:200px; padding:2%;`:`transition:.5s; max-height:0;`}
+      ${(props)=>props.open === 1 ? `transition:.5s; max-height:500px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(2){
@@ -420,7 +420,7 @@ export const FAQElement = styled.div`
       ${props => props.open === 2 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open === 2 ? `transition:.5s; max-height:200px; padding:2%;`:`transition:.5s; max-height:0;`}
+      ${(props)=>props.open === 2 ? `transition:.5s; max-height:500px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(3){
@@ -428,7 +428,7 @@ export const FAQElement = styled.div`
       ${props => props.open === 3 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open === 3 ? `transition:.5s; max-height:200px; padding:2%;`:`transition:.5s; max-height:0;`}
+      ${(props)=>props.open === 3 ? `transition:.5s; max-height:500px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(4){
@@ -436,7 +436,7 @@ export const FAQElement = styled.div`
       ${props => props.open === 4 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open === 4 ? `transition:.5s; max-height:300px; padding:2%;`:`transition:.5s; max-height:0;`}
+      ${(props)=>props.open === 4 ? `transition:.5s; max-height:500px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
   &:nth-child(5){
@@ -444,7 +444,7 @@ export const FAQElement = styled.div`
       ${props => props.open === 5 ? `color:rgba(107, 187, 244, 1); font-weight:bold;`:` color:rgba(119, 119, 119, 1); font-weight:normal;`}
     }
     ${FAQAnswer}{
-      ${(props)=>props.open === 5 ? `transition:.5s; max-height:300px; padding:2%;`:`transition:.5s; max-height:0;`}
+      ${(props)=>props.open === 5 ? `transition:.5s; max-height:500px; padding:2%;`:`transition:.5s; max-height:0;`}
     }
   }
 
