@@ -8,7 +8,7 @@ import {
   AboutSub,
   AboutText,
 } from './StyledComponent';
-import profile from './img/profile.jpg'
+import profile from './img/profile.jpeg'
 import React, {forwardRef} from 'react';
 
 const About = forwardRef((props, ref) => {

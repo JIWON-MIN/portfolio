@@ -183,7 +183,7 @@ export const AboutContentWrapper = styled.div`
 
 export const AboutPhoto = styled.img`
   width: 300px;
-  height: 300px;
+  height: auto;
   border-radius: 150px;
   filter: brightness(110%);
   margin-top: 36px;
@@ -273,7 +273,7 @@ export const WorksElement = styled.div`
 `;
 
 export const WorksImg = styled.img`
-  width: 60%;
+  width: 50%;
   cursor: pointer;
 
   ${WorksElement}:hover &{
@@ -293,7 +293,7 @@ export const WorksDetail = styled.div`
   display: inline;
   visibility: hidden;
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: 100%;
   cursor: pointer;
   text-align: left;
@@ -310,7 +310,7 @@ export const WorksDetail = styled.div`
 `;
 
 export const WorksName = styled.div`
-  font-size: 2.4vw;
+  font-size: 1.8vw;
   font-weight: 700;
   padding: 3% 0 0 3%;
 
@@ -330,9 +330,9 @@ export const WorksDesc = styled.div`
 `;
 
 export const WorksMyRole = styled.ul`
-  font-size: 1.5vw;
+  font-size: 1vw;
   font-weight: 600;
-  line-height: 3vw;
+  line-height: 2vw;
   padding: 3% 3% 0 6%;
   margin: 0;
 `;
